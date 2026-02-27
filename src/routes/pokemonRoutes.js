@@ -1,0 +1,4 @@
+
+
+
+router.get('/pokemon/:nameOrId', pokemonController.getPokemonDetails);
