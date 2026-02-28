@@ -1,7 +1,7 @@
 <%- include('partials/header') %>
 
 <main class="main-content">
-  <div class="search-section">
+  <div class="search-section" id="search">
     <form action="/search" method="GET" class="search-form">
       <div class="search-input-wrapper">
         <input
@@ -20,7 +20,7 @@
       </div>
     </form>
 
-    <div class="type-filter">
+    <div class="type-filter" id="types">
       <label>Filter by Type:</label>
       <div class="type-buttons">
         <a href="/" class="type-btn <%= selectedType === '' ? 'active' : '' %>">All</a>
@@ -47,7 +47,7 @@
     </div>
   <% } %>
 
-  <div class="pokemon-grid">
+  <div class="pokemon-grid" id="list">
     <% if (pokemon && pokemon.length > 0) { %>
       <% pokemon.forEach(poke => { %>
         <a href="/pokemon/<%= poke.name %>" class="pokemon-card type-bg-<%= poke.types[0] %>">
